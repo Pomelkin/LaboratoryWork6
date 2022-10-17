@@ -6,6 +6,7 @@ using namespace std;
 
 int GetRandomNumber(int min, int max)
 {
+	setlocale(LC_ALL, "Russian");
 	// Установить генератор случайных чисел
 	srand(time(NULL)) ;
 
@@ -24,6 +25,7 @@ int gen ()
 
 int Question(int num1, int num2)
 {
+	setlocale(LC_ALL, "Russian");
 	int proiz;
 	cout << "\nСколько будет " << num1 << " * " << num2 << "?\n";
 	cin >> proiz;
