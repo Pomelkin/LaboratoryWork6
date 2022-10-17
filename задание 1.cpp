@@ -12,13 +12,9 @@ int main()
     while (n < nconst)
     {
         int num1, num2;
-        bool proverka1;
         num1 = gen();
         num2 = gen();
-        ///proiz = num1 * num2;
-        ////proizcin = Question(num1, num2);
-        proverka1 = Proverka(Question(num1, num2), num1*num2);
-        k += ball(proverka1);
+        k += ball(Proverka(Question(num1, num2), num1 * num2));
         n += 1;
     }
     cout << "/nВаша оценка " << mark(k, nconst);

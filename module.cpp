@@ -1,11 +1,24 @@
 #include <stdlib.h>
 #include <iostream>
+#include <time.h>
 #include "Krrab.h"
 using namespace std;
 
+int GetRandomNumber(int min, int max)
+{
+	// ”становить генератор случайных чисел
+	srand(time(NULL)) ;
+
+	// ѕолучить случайное число - формула
+	int num = min + rand() % (max - min + 1);
+
+	return num;
+}
+
 int gen ()
 {
-	int num = rand() % 10 + 2;
+	srand(time(NULL));
+	int num = GetRandomNumber(2,10);
 	return num;
 }
 
